@@ -1,6 +1,16 @@
+
 .env
 __pycache__/
 *.pyc
 .venv/
 .pytest_cache/
 .ruff_cache/
+.complexipy_cache/
+.mypy_cache/
+.coverage   
+.ruff_cache/
+data/
+instance/
+.DS_Store
+coverage.xml
+htmlcov/
