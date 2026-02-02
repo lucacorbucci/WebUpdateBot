@@ -37,7 +37,7 @@ async def test_start(mock_db):
     context = MagicMock()
     await start(update, context)
     update.message.reply_text.assert_called_once()
-    assert "/follow` - Start monitoring" in update.message.reply_text.call_args[0][0]
+    assert "WebUpdateBot" in update.message.reply_text.call_args[0][0]
     assert "/remove` - Stop monitoring" in update.message.reply_text.call_args[0][0]
     assert "/update` - Change check frequency" in update.message.reply_text.call_args[0][0]
 
@@ -58,6 +58,7 @@ async def test_follow_args_rejected():
 async def test_follow_start():
     update = AsyncMock()
     context = MagicMock()
+    context.args = []
     state = await follow_start(update, context)
     assert state == FOLLOW_URL
     assert "Please send me the **URL**" in update.message.reply_text.call_args[0][0]

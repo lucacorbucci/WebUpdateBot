@@ -1,4 +1,4 @@
-# Scraper Bot
+# WebUpdateBot
 
 A simple Telegram bot that monitors a webpage for updates and sends notifications.
 

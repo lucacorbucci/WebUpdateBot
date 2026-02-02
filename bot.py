@@ -46,7 +46,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if not update.effective_chat or not update.message:
         return
     await update.message.reply_text(
-        "👋 Welcome to Scraper Bot V2!\n\n"
+        "👋 Welcome to WebUpdateBot!\n\n"
         "I can monitor webpages for you and notify you when they change.\n\n"
         "**Commands:**\n"
         "`/follow` - Start monitoring a URL\n"
@@ -375,7 +375,7 @@ async def daily_report_job(context: ContextTypes.DEFAULT_TYPE):
         active_monitors_count = len(active_monitors.scalars().all())
 
     msg = (
-        "📊 **Daily Scraper Bot Report**\n\n"
+        "📊 **Daily WebUpdateBot Report**\n\n"
         f"✅ Bot is alive and running.\n"
         f"Total Monitors: {total_monitors_count}\n"
         f"Active Monitors: {active_monitors_count}\n"
